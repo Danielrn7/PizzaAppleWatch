@@ -1,5 +1,5 @@
 //
-//  TamañoController.swift
+//  TamañoController.swift
 //  PizzaAppleWatch WatchKit Extension
 //
 //  Created by Daniel Ramirez on 24/11/17.
@@ -12,9 +12,9 @@ import Foundation
 
 class TamanioController: WKInterfaceController {
     
-    @IBOutlet var esTamanioGrande: WKInterfaceSwitch!
-    @IBOutlet var esTamanioMediano: WKInterfaceSwitch!
-    @IBOutlet var esTamanioChico: WKInterfaceSwitch!
+    @IBOutlet var esTamañoGrande: WKInterfaceSwitch!
+    @IBOutlet var esTamañoMediano: WKInterfaceSwitch!
+    @IBOutlet var esTamañoChico: WKInterfaceSwitch!
     
     var datosPedido : DatosPedido? = nil
     
