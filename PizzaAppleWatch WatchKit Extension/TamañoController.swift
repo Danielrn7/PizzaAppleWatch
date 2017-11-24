@@ -18,10 +18,10 @@ class TamanioController: WKInterfaceController {
     
     var datosPedido : DatosPedido? = nil
     
-    var tamanioSeleccionado : Bool = false
-    var tamanioSeleccionadoStr : String = ""
+    var tamañoSeleccionado : Bool = false
+    var tamañoSeleccionadoStr : String = ""
     
-    @IBAction func changeTamanioGrande(value: Bool) {
+    @IBAction func changeTamañoGrande(value: Bool) {
         if (value == true){
             esTamañoMediano.setOn(false)
             esTamañoChico.setOn(false)
@@ -32,7 +32,7 @@ class TamanioController: WKInterfaceController {
         }
     }
     
-    @IBAction func changeTamanioMediano(value: Bool) {
+    @IBAction func changeTamañoMediano(value: Bool) {
         if (value == true){
             esTamañoGrande.setOn(false)
             esTamañoChico.setOn(false)
@@ -43,7 +43,7 @@ class TamanioController: WKInterfaceController {
         }
     }
     
-    @IBAction func changeTamanioChico(value: Bool) {
+    @IBAction func changeTamañoChico(value: Bool) {
         if (value == true){
             esTamañoGrande.setOn(false)
             esTamañoMediano.setOn(false)
@@ -57,7 +57,7 @@ class TamanioController: WKInterfaceController {
     
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
         
-        if (segueIdentifier == "tamanioSegue"){
+        if (segueIdentifier == "tamañoSegue"){
             
             if (tamañoSeleccionado == false){
                 showPopup()
