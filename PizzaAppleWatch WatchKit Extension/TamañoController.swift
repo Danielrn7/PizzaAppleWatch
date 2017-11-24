@@ -23,34 +23,34 @@ class TamanioController: WKInterfaceController {
     
     @IBAction func changeTamanioGrande(value: Bool) {
         if (value == true){
-            esTamanioMediano.setOn(false)
-            esTamanioChico.setOn(false)
-            tamanioSeleccionado = true
-            tamanioSeleccionadoStr = "Grande"
+            esTamañoMediano.setOn(false)
+            esTamañoChico.setOn(false)
+            tamañoSeleccionado = true
+            tamañoSeleccionadoStr = "Grande"
         } else {
-            tamanioSeleccionado = false
+            tamañoSeleccionado = false
         }
     }
     
     @IBAction func changeTamanioMediano(value: Bool) {
         if (value == true){
-            esTamanioGrande.setOn(false)
-            esTamanioChico.setOn(false)
-            tamanioSeleccionado = true
-            tamanioSeleccionadoStr = "Mediano"
+            esTamañoGrande.setOn(false)
+            esTamañoChico.setOn(false)
+            tamañoSeleccionado = true
+            tamañoSeleccionadoStr = "Mediano"
         } else {
-            tamanioSeleccionado = false
+            tamañoSeleccionado = false
         }
     }
     
     @IBAction func changeTamanioChico(value: Bool) {
         if (value == true){
-            esTamanioGrande.setOn(false)
-            esTamanioMediano.setOn(false)
-            tamanioSeleccionado = true
-            tamanioSeleccionadoStr = "Chico"
+            esTamañoGrande.setOn(false)
+            esTamañoMediano.setOn(false)
+            tamañoSeleccionado = true
+            tamañoSeleccionadoStr = "Chico"
         } else {
-            tamanioSeleccionado = false
+            tamañoSeleccionado = false
         }
     }
     
@@ -59,15 +59,15 @@ class TamanioController: WKInterfaceController {
         
         if (segueIdentifier == "tamanioSegue"){
             
-            if (tamanioSeleccionado == false){
+            if (tamañoSeleccionado == false){
                 showPopup()
             }
             
-            datosPedido = DatosPedido(t: tamanioSeleccionadoStr, m: "", q: "", i: "")
+            datosPedido = DatosPedido(t: tamañoSeleccionadoStr, m: "", q: "", i: "")
             
             pushController(withName: "MasaController", context: datosPedido)
             
-            return ["segue":"tamanioSegue", "data": datosPedido!]
+            return ["segue":"tamañoSegue", "data": datosPedido!]
             
         } else {
             return nil
